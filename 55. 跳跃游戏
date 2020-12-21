@@ -1,0 +1,16 @@
+```
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int mostright=0;
+        int left=0;
+        while(left<=mostright){
+            mostright=max(mostright, left+nums[left]);
+            left++;
+            if(mostright>=nums.size()-1)return true;
+
+        }
+        return false;
+        
+    }
+    ```
